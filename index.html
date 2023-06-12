@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:Medium+500:Bold+700">
+    <link rel="stylesheet" href="src/styles.scss" />
+    <script type="module" src="src/main.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Your Daily Planner
+        </h1>
+    </div>
+    <div class="container">
+        <div class="popup-hidden" id="history-popup">
+            <div class="popup-header">
+                <h2>History 📚</h2>
+                <button class="btn-clear btn-close-history">✖️</button>
+                <button class="btn-clear btn-retrieve-data">Retrieve data</button>
+            </div>
+            <ul class="list-history">
+            </ul>
+            <button class="btn-clear btn-clear-all-storage">Clear all saved data (tasks & shopping list)</button>
+        </div>
+        <div class="planner">
+            <div class="edit-popup popup-hidden">
+                <div class="popup-header">
+                    <h2> 💬 Edit task</h2>
+                    <button class="btn-close-popup">✖️</button>
+                </div>
+                <div class="popup-content">
+                    <input type="text" class="inp edit-input" name="task-edit" required minlength="1" maxlength="50"
+                        size="50">
+                    <button type="submit" class="btn-save">Save</button>
+                </div>
+            </div>
+            <div class="planner-date">
+                
+            </div>
+            <div class="planner-add__task">
+                <form class="planner-form">
+                    <input type="text" novalidate placeholder="Write down your task and hit enter" class="inp task-input" name="task-content" required size="50">
+                    <button type="submit" class="btn planner-add__task-btn">+</button>
+                </form>
+            </div>
+            <div class="list">
+                <ul class="list-items" id="list-1">
+                </ul>
+            </div>
+            <div class="planner-button">
+                <button class="btn-clear btn-clear-tasks">✖️ Clear list</button>
+            </div>
+
+            <div class="legend">
+                <h3>Task labels</h3>
+                <p class="labels-intro">Click on task date to choose a label and set priority.</p>
+                <div class="labels">
+                    <p class="label label-red">Urgent</p>
+                    <p class="label label-yellow">Important</p>
+                    <p class="label label-blue">Can wait</p>
+                    <p class="label label-green">Done</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="feed">
+            <div class="shopping">
+                <div class="shopping-header">
+                    <h4 class="feed-header">Shopping list</h4>
+                </div>
+                <div class="shopping-section">
+                    <form class="shopping-form">
+                        <input type="text" class="inp shopping-input" placeholder="Add item and hit enter" name="shopping-input"
+                            required minlength="1" size="10">
+                    </form>
+                    <ul class="shopping-list" id="list-2">
+                    </ul>
+                    <div class="shopping-buttons">
+                        <button class="btn-clear btn-clear-list">✖️ Clear list</button>
+                    </div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="shopping-header">
+                    <h4 class="feed-header">Latest news</h4>
+                </div>
+                <div class="news-section">
+                    <ul class="news-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
